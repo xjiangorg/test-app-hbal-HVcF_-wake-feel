@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-stgf
+  namespace: build-e2e-fqpi-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:160b2882616decf62515ee03b2df587b4eed78e145a5ac2772bf45709e517895
+        name: my-python
+        resources: {}
+status: {}
